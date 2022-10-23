@@ -2,20 +2,25 @@ import React, { useState } from 'react'
 import '../styles/App.css';
 const App = () => {
 
-  const [text,setText] = useState(true)
-
+  const [text,setText] = useState('Macro')
+  const [state, setState] = useState(true)
   
   const handleClick = () => {
-    if(text === true)
-      setText(false)
-    else 
-      setText(true)
+    if(state === true){
+      setState(false)
+      setText('Polo')
+    }
+    else {
+       setState(true)
+       setText('Macro')
+    }
+      
   }
 
   return (
     <div id="main">
-      <h1 id="marco-polo">{text === true ? 'Macro' : 'Polo'}</h1>
-      <button id="marco-polo-toggler" onClick={handleClick}>{text === true ? 'Polo' : 'Macro'}</button>
+      { state === true ? <h1 id="marco-polo">{text}</h1> : <h1 id="marco-polo">{text}</h1>}
+      <button id="marco-polo-toggler" onClick={handleClick}>{state === true ? 'Polo' : 'Macro'}</button>
     </div>
   )
 }
