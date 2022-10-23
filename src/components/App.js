@@ -3,9 +3,13 @@ import '../styles/App.css';
 const App = () => {
 
   const [text,setText] = useState(true)
+
   
   const handleClick = () => {
-      setText(!text)
+    if(text === true)
+      setText(false)
+    else 
+      setText(true)
   }
 
   return (
