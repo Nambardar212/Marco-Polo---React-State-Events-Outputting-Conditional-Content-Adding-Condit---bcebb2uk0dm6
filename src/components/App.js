@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div id="main">
        { <h1 id="marco-polo">{state === true ? "Marco": "Polo"}</h1>}
-      <button id="marco-polo-toggler" onClick={handleClick}>{state === true ? 'Polo' : 'Macro'}</button>
+      {<button id="marco-polo-toggler" onClick={handleClick}>{state === true ? 'Polo' : 'Macro'}</button>}
     </div>
   )
 }
