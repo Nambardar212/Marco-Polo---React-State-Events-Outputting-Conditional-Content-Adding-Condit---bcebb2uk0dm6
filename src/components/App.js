@@ -6,17 +6,17 @@ const App = () => {
   
   const handleClick = () => {
     if(state === true){
-      setState(false)
+      setState(!state)
     }
-    else {
-       setState(true)
-    }
+   
+
+
       
   }
 
   return (
     <div id="main">
-       { <h1 id="marco-polo">{state === true ? "Marco": "Polo"}</h1>}
+       { <h1 id="marco-polo">{state? "Marco": "Polo"}</h1>}
       {<button id="marco-polo-toggler" onClick={handleClick}>{state === true ? 'Polo' : 'Macro'}</button>}
     </div>
   )
